@@ -1,5 +1,5 @@
 import './main.css';
-import _ from '/rocky.jpg'
+import rocky from '/rocky.jpg'
 import * as THREE from 'three';
 
 const scene = new THREE.Scene();
@@ -14,7 +14,7 @@ renderer.setAnimationLoop(animate);
 renderer.render(scene, camera);
 
 const geometry = new THREE.SphereGeometry(1, 32, 32);
-const texture = new THREE.TextureLoader().load('rocky.jpg')
+const texture = new THREE.TextureLoader().load(rocky)
 const material = new THREE.MeshBasicMaterial({ map: texture });
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
