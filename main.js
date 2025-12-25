@@ -1,4 +1,5 @@
 import './main.css';
+import _ from '/rocky.jpg'
 import * as THREE from 'three';
 
 const scene = new THREE.Scene();
