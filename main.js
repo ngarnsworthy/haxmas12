@@ -1,5 +1,6 @@
 import './main.css';
 import rocky from '/rocky.jpg'
+import wood from '/wood.jpg'
 import * as THREE from 'three';
 
 const scene = new THREE.Scene();
@@ -20,7 +21,8 @@ const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
 const donut_geo = new THREE.TorusGeometry(10, 0.3, 16, 100);
-const donut_tex = new THREE.MeshBasicMaterial({ color: 0xffffff });
+const donut_texture = new THREE.TextureLoader().load(wood)
+const donut_tex = new THREE.MeshBasicMaterial({ map: donut_texture });
 const donut = new THREE.Mesh(donut_geo, donut_tex);
 scene.add(donut);
 
