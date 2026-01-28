@@ -46,13 +46,12 @@ Array(200).fill().forEach(add_star);
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
 
-  cube.rotation.y += 0.01;
-  cube.rotation.z += 0.01;
+  cube.rotation.y = 0.01 * t;
+  cube.rotation.z = 0.01 * t;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0000;
   camera.rotation.y = t * -0.0000;
-
 }
 
 document.body.onscroll = moveCamera;

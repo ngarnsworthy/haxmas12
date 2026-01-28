@@ -50,3 +50,6 @@ section {
 .left {
     grid-column: 6 / 12;
 }
+
+.right {
+    grid-column: 6 / -1;
